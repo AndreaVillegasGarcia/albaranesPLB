@@ -1,0 +1,54 @@
+<div class="card" style="width: 60%; margin-left: 15%;">
+  <div class="card-body px-lg-5 pt-0">
+    <form (submit)="submit()" [formGroup]="registerForm"> 
+      <p class="h4 mb-6 text-center" style="margin-top: 20px; margin-bottom: 20px;">Añadir albarán</p>
+        <!-- Cliente -->
+        <div class="form-group row">
+          <label for="cliente" class="col-sm-2 col-form-label">Cliente</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="cliente" placeholder="Cliente" formControlName="cliente">
+          </div>
+        </div>
+        <!-- CIF -->
+        <div class="form-group row">
+          <label for="cif" class="col-sm-2 col-form-label">CIF</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="cif" placeholder="CIF" formControlName="cif">
+          </div>
+        </div>
+        <!-- Direccion -->
+        <div class="form-group row">
+          <label for="direccion" class="col-sm-2 col-form-label">Dirección</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="direccion" placeholder="Dirección" formControlName="direccion">
+          </div>
+        </div>
+        <!-- Num Albaran -->
+        <div class="form-group row">
+          <label for="numAlbaran" class="col-sm-2 col-form-label">Número de albarán</label>
+          <div class="col-sm-2">
+            <input type="text" class="form-control" id="numAlbaran" placeholder="" formControlName="numAlbaran">
+          </div>
+        </div>
+        <!-- Fecha -->
+        <div class="form-group row">
+          <label for="fecha" class="col-sm-2 col-form-label">Fecha</label>
+          <div class="col-sm-8">
+            <input matInput [matDatepicker]="picker" class="form-control col-sm-3" id="direccion" placeholder="Fecha" style="display: inline;" formControlName="fecha"> 
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker class="col-sm-3" #picker style="display: inline;"></mat-datepicker>
+          </div>
+        </div>
+      <!-- Cliente -->
+      <div class="form-group row">
+        <label for="cliente" class="col-sm-2 col-form-label">Cliente</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="cliente" placeholder="Cliente">
+        </div>
+      </div>
+      <div style="margin-top: 10px;">
+        <button class="btn btn-info md-4" type="submit">Añadir</button>
+      </div>
+    </form>
+  </div>
+</div>
